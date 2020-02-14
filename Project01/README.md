@@ -36,4 +36,4 @@ Prompts the user for a an input of <"Backup"> or <"Restore"> using the read comm
 If Backup is selected
 A new empty directory called backup is created, if the directory exists, the directory is removed and a new one is created
 The find command is utilised to find all files concluding in .tmp
-
+Moves all files from the current directory to the backup directory
