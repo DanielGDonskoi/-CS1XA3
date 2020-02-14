@@ -2,7 +2,7 @@
 # CS 1XA3 Project01 - guoussed
 ## Usage
 Execute this script from project root with:
-chmod +x CS1XA3/Project01/project_analyze.sh
+chmod +x CS1XA3/Project01/project_analyze.sh  return
 ./CS1XA3/Project01/project_analyze arg1 arg2 ...
 With possible arguments after project_analyze.sh
 arg1: . (Single Period)(Calls FIXME Log)
