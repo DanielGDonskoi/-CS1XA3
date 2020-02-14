@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/bin/bash
 if [ "$#" -eq 1 ]; then
 	if [ -f "fixme.log" ]; then
@@ -44,3 +45,6 @@ else
 	echo "Further Features not yet implemented"
 fi
 
+=======
+
+>>>>>>> 9f8b844f4dd9c7dd0e3e0d0f25a798d8f0003c46
