@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #!/bin/bash
 if [ "$#" -eq 1 ]; then
 	if [ -f "fixme.log" ]; then
@@ -17,7 +17,7 @@ if [ "$#" -eq 1 ]; then
 		fi
 	done;
 elif [ "$#" -eq 2 ]; then
-	echo "Please enter a file extension"
+	echo "Please enter a file extension beginning with .(example .txt)"
 	read extension
 	echo The Extension is $extension
 	found=$(find -type f -name "*$extension" | wc -l )
@@ -45,6 +45,4 @@ else
 	echo "Further Features not yet implemented"
 fi
 
-=======
 
->>>>>>> 9f8b844f4dd9c7dd0e3e0d0f25a798d8f0003c46

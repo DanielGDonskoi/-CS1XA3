@@ -1,12 +1,12 @@
 #-CS1XA3 Project01 - guoussed
 
 ##Usage 
- Execute this script from project root using chmod +x -CS1XA3/Project01/project_analyze.sh
- If chmod +x refuses to execute due to permission errors, call with bash in place of chmod +x
- With Possible Arguments 
-Argument 1: . (Supply single dot following filename)
-Argument 2: .. (Supply two dots following filename)
-Argument 3: ... (Supply three dots following filename)
+### Execute this script from project root using chmod +x -CS1XA3/Project01/project_analyze.sh
+### If chmod +x refuses to execute due to permission errors, call with bash in place of chmod +x
+### With Possible Arguments 
+####Argument 1: . (Supply single dot following filename)
+####Argument 2: .. (Supply two dots following filename)
+####Argument 3: ... (Supply three dots following filename)
 
 ##Feature 01: FIXME Log
 #
