@@ -41,6 +41,22 @@ elif [ "$#" -eq 3 ]; then
 			echo $octothorp >> Tag.log
 		fi
 	done
+elif [ "$#" -eq 4 ]; then
+	echo "Fourth incomplete"
+elif [ "$#" -eq 5 ]; then
+	echo "Fifth incomplete"
+elif [ "$#" -eq 6 ]; then
+	echo "Sixth incomplete"
+elif [ "$#" -eq 7 ]; then
+	echo "Do you wish to backup or restore" 
+	read choice
+	if [ " $choice" = "backup" ]; then
+		echo "backup"
+		if [ -d backup ]; then
+			
+	elif [ "$choice" = "restore" ] ; then
+		echo "restore"
+	fi
 else
 	echo "Further Features not yet implemented"
 fi
