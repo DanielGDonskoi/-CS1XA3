@@ -58,7 +58,8 @@ elif [ "$#" -eq 7 ]; then
 			mkdir backup
 		else
 			mkdir backup
-		fi	
+		fi
+		found=$(find 
 	elif [ "$choice" = "restore" ] ; then
 		echo "restore"
 	fi
