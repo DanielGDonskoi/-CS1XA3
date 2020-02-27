@@ -46,7 +46,15 @@ elif [ "$#" -eq 4 ]; then
 elif [ "$#" -eq 5 ]; then
 	echo "Fifth incomplete"
 elif [ "$#" -eq 6 ]; then
-	echo "Sixth incomplete"
+	found=$(find . -type f -name "*.sh")
+	touch permissions.log
+	echo "Enter change to change permissions, Enter restore to restore them"
+	read userinput
+	if [ "$userinput" = "Change" ]; then
+		echo "You have selected Change"
+	elif [ "$userinput" = "Restore" ]; then
+		echo "You have selected Restore"
+	fi
 elif [ "$#" -eq 7 ]; then
 	echo "Do you wish to backup or restore" 
 	read choice
@@ -58,9 +66,19 @@ elif [ "$#" -eq 7 ]; then
 			mkdir backup
 		else
 			mkdir backup
-		fi	
+		fi
+		found=$(find . -type f -name "*.tmp")
+		touch restore.log
+		for item in $found ; do
+			echo $item
+			echo $item >> restore.log
+			mv $item backup
+		done	
 	elif [ "$choice" = "restore" ] ; then
-		echo "restore"
+		echo "You have selected restore"
+		for file in backup ; do 
+			echo $file
+		done
 	fi
 else
 	echo "Further Features not yet implemented"
