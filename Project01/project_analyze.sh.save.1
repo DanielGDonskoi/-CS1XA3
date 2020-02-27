@@ -76,7 +76,7 @@ elif [ "$#" -eq 7 ]; then
 		done	
 	elif [ "$choice" = "restore" ] ; then
 		echo "You have selected restore"
-		backupfiles=$(find /backup/ -type f)
+		backupfiles=$(find backup -type f)
 		for file in "$backupfiles"  ; do 
 			echo $file
 		done
