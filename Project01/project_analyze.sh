@@ -59,6 +59,7 @@ elif [ "$#" -eq 7 ]; then
 	echo "Do you wish to backup or restore" 
 	read choice
 	if [ "$choice" = "backup" ]; then
+		rm restore.log
 		echo "You have selected backup"
 		if [ -d backup ]; then
 			echo "backup exists"
@@ -76,9 +77,13 @@ elif [ "$#" -eq 7 ]; then
 		done	
 	elif [ "$choice" = "restore" ] ; then
 		echo "You have selected restore"
-		backupfiles=$(find /backup/ -type f)
+		backupfiles=$(find backup -type f)
 		for file in "$backupfiles"  ; do 
 			echo $file
+			x=$(head restore.log)
+			xdir=$(dirname $x)
+			echo $xdir
+			mv $file $xdir
 		done
 	fi
 else
