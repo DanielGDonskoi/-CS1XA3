@@ -53,7 +53,11 @@ elif [ "$#" -eq 6 ]; then
 	if [ "$userinput" = "change" ]; then
 		echo "You have selected change"
 		for item in $found; do
-			echo chmod u+x $item >> $item
+			if [ -w "$item" ]; then
+				echo "Write permissions"
+			else 
+				echo "No write permissions"
+			fi
 		done
 	elif [ "$userinput" = "restore" ]; then
 		echo "You have selected Restore"
