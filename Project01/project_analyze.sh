@@ -50,9 +50,12 @@ elif [ "$#" -eq 6 ]; then
 	touch permissions.log
 	echo "Enter change to change permissions, Enter restore to restore them"
 	read userinput
-	if [ "$userinput" = "Change" ]; then
-		echo "You have selected Change"
-	elif [ "$userinput" = "Restore" ]; then
+	if [ "$userinput" = "change" ]; then
+		echo "You have selected change"
+		for item in $found; do
+			echo chmod u+x $item >> $item
+		done
+	elif [ "$userinput" = "restore" ]; then
 		echo "You have selected Restore"
 	fi
 elif [ "$#" -eq 7 ]; then
@@ -89,5 +92,6 @@ elif [ "$#" -eq 7 ]; then
 else
 	echo "Further Features not yet implemented"
 fi
+
 
 
