@@ -57,34 +57,14 @@ elif [ "$#" -eq 4 ]; then
 		fi
 	done
 elif [ "$#" -eq 5 ]; then
-	touch modifieditems.log
 	echo "Please specify if you want an extension or prefix"
 	read choice1
 	echo "Please enter the prefix or extension"
 	read choice2
 	if [ "$choice1" = "extension" ]; then
 		echo "The user selected an extension"
-		found=$(find . -type f -name "*$choice2")
-	elif [ "$choice1" = "prefix" ]; then
+	elif [ "$choice1" = "prefix" ] ; then
 		echo "The user selected a prefix"
-		found=$(find . -name "$choice2*")
-	fi
-	for item in $found; do
-		echo $item >> modifieditems.log
-	done
-	echo "Input yes if you want the files to be executable and no if not"
-	read executable
-	if [ "$executable" = "yes" ]; then
-		for item in $found; do
-			name=$( basename $item )
-			chmod a+x $name
-		done
-	else
-		for item in $found; do
-			name=$( basename $item)
-			chmod a-x $name
-		done
-	fi
 elif [ "$#" -eq 6 ]; then
 	found=$(find . -type f -name "*.sh")
 	touch permissions.log
@@ -94,7 +74,7 @@ elif [ "$#" -eq 6 ]; then
 		echo "You have selected change"
 		for item in $found; do
 			octal=$(stat -c "%a %n" $item)
-			echo $octal >> permissions.log
+			echo $octal
 		done
 	elif [ "$userinput" = "restore" ]; then
 		echo "You have selected Restore"
