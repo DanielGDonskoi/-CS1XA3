@@ -86,18 +86,27 @@ elif [ "$#" -eq 5 ]; then
 		done
 	fi
 elif [ "$#" -eq 6 ]; then
-	found=$(find . -type f -name "*.sh")
+	found=$(find . -type f -name "*.sh") 
 	touch permissions.log
 	echo "Enter change to change permissions, Enter restore to restore them"
 	read userinput
 	if [ "$userinput" = "change" ]; then
 		echo "You have selected change"
 		for item in $found; do
-			octal=$(stat -c "%a %n" $item)
+			octal=$(stat -c %a "$item" )
+			userread=${octal:0:1}
 			echo $octal >> permissions.log
 		done
 	elif [ "$userinput" = "restore" ]; then
 		echo "You have selected Restore"
+		count=0
+		for file in $found;do
+			count=$(($count+1))
+			name=$(basename $file)
+			echo $(sed "${count}q;d" permissions.log)
+			echo $name
+			chmod $(sed "${count}q;d" permissions.log) $name 
+		done
 	fi
 elif [ "$#" -eq 7 ]; then
 	echo "Do you wish to backup or restore" 
