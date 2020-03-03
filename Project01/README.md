@@ -28,17 +28,18 @@ Reference: N/A
 ## Custom Feature 01: File Cleanup
 Description: this feature finds all files of a user prompted directory and organises them into sub directories of the directory this script is located in based around their extension ordered alphabetically\
 Execution: execute this feature by calling project_analyze.sh .... (Four characters after)\
-Reference: some code was taken from NOT YET IMPLENTED
+Reference: some code was taken from https://stackoverflow.com/questions/8512462/looping-through-all-files-in-a-directory
 ## Custom  Feature 02: Broadly Alter Permissions
 Description: this feature takes a user prompt which can either be an extension or file prefix and provides the user with a set of options on how they would like all the files in that category to have their permissions adjusted.
 Creates a file containing all the original permissions of the altered files. \
 Execution: execute this feature by calling project_analyze.sh .....(Five characters after)\
-Reference: some code was taken from NOT YET IMPLEMENTED
+Reference: some code was taken from https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-file/6022431 and 
 ## Feature 05: Switch to Executable
 Description: this feature prompts the user to either type change or restore. If the user selects change, files become executable only by those who have write permissions to them and stores the original permissions in a file.
 If the user selects Restore, the files are returned to their original permissions or if the user has not changed permissions, says so.\
 Execution: execute this feature by calling project_analyze.sh ......(Six characters after)\
-Reference: some code was taken from NOT YET IMPLEMENTED
+Reference: some code was taken from https://stackoverflow.com/questions/428109/extract-substring-in-bash and 
+https://askubuntu.com/questions/144921/how-to-get-chmod-octal-permissions-of-the-folder-in-the-terminal
 ## Feature 06: Backup and Delete/Restore
 Description: this feature prompts the user to either type backup or restore. If the user types backup, an empty directory is created that stores all temporary files and deletes them from their original location and creates a file
 that logs their original locations. If the user selects restore, the files are restored to their original directories and locations.\
