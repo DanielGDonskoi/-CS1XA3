@@ -26,12 +26,11 @@ Description: this feature Allows the user to select which feature of the script 
 Execution: execute this feature by calling one of the other 3 features\
 Reference: N/A
 ## Custom Feature 01: File Cleanup
-Description: this feature finds all files of a user prompted directory and organises them into sub directories of the directory this script is located in based around their extension ordered alphabetically\
+Description: this feature finds all files of a user prompted directory and organises them into sub directories of the directory this script is located in based around their extension\
 Execution: execute this feature by calling project_analyze.sh .... (Four characters after)\
 Reference: some code was taken from https://stackoverflow.com/questions/8512462/looping-through-all-files-in-a-directory
 ## Custom  Feature 02: Broadly Alter Permissions
-Description: this feature takes a user prompt which can either be an extension or file prefix and provides the user with a set of options on how they would like all the files in that category to have their permissions adjusted.
-Creates a file containing all the original permissions of the altered files. \
+Description: this feature takes a user prompt which can either be an extension or file prefix and asks the user if they want all the files in that category to be executable or not and adjusts those files\
 Execution: execute this feature by calling project_analyze.sh .....(Five characters after)\
 Reference: some code was taken from https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-file/6022431 and 
 ## Feature 05: Switch to Executable
