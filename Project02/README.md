@@ -3,13 +3,16 @@
 This webpage is Daniel Guoussev Donskoi's custom CV which was implemented on an open source html template...
 ## Custom Javascript Code
 
-###Text Color Change
+### Text Color Change
+
 Description: this feature 
 
-###Cursor Change
+### Cursor Change
+
 Description: This feature
 
-###Background change
+### Background change
+
 Description: This feature
 
 ## References
