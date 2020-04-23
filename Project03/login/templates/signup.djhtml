@@ -1,0 +1,14 @@
+{% extends 'base.djhtml' %}
+
+{% block title %}Signup Page{% endblock %}
+
+{% block middle_column %}
+    <form method="post" id="signup_form" action="{% url 'social:messages_view' %}">
+        {% csrf_token %}
+        {{ signup_form }}
+        <input type="submit" value="Submit" />
+    </form>
+    {% if signup_failed %}
+        <p style="color:red"> Invalid username or password </p>
+    {% endif %}
+{% endblock %}
